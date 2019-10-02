@@ -1,0 +1,32 @@
+package testing;
+
+import linked_list.LinkedList;
+
+public class Testing {
+	public static void main(String[] args) {
+		
+		LinkedList<Integer> list = new LinkedList<Integer>();
+		int n = 10;
+		for (int i = 0; i < n; i++) {
+			list.addFirst(i);
+		}
+		
+		for (int i: list) {
+			System.out.println(i);
+		}
+		
+		for (int i = n - 1; i >= 0; i--) {
+			int x = list.removeFirst();
+			if (x != i) {
+				System.out.println("X " + x + " - I " + i);
+			}
+		}
+		
+		for (int i = 0; i < n; i++) {
+			list.addFirst(10);
+		}
+		
+		
+		
+	}
+}
